@@ -1,0 +1,32 @@
+from IPython.display import display, HTML
+
+# Função para gerar o código HTML com o formulário e a lógica do "Te Amo"
+def gerar_pagina():
+    html_code = """
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Te Amo</title>
+        <script>
+            function mostrarMensagem() {
+                var nome = document.getElementById("nome").value;
+                if(nome) {
+                    document.getElementById("mensagem").innerHTML = "Te amo, " + nome + "!";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h2>Digite seu nome:</h2>
+        <input type="text" id="nome" placeholder="Seu nome">
+        <button onclick="mostrarMensagem()">Enviar</button>
+        <p id="mensagem" style="font-size: 24px; color: red;"></p>
+    </body>
+    </html>
+    """
+    return html_code
+
+# Exibir a página HTML no Colab
+display(HTML(gerar_pagina()))
