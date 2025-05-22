@@ -7,8 +7,12 @@
     <script>
         function mostrarMensagem() {
             var nome = document.getElementById("nome").value;
-            if(nome) {
-                document.getElementById("mensagem").innerHTML = "Te amo, " + nome + "!" + "❤️";
+            
+            // Verifica se o nome é exatamente "Ariely", "ariely" ou "ARIELY"
+            if(nome === "Ariely" || nome === "ariely" || nome === "ARIELY") {
+                document.getElementById("mensagem").innerHTML = "Te amo, " + nome + "! ❤️";
+            } else {
+                document.getElementById("mensagem").innerHTML = "Nome não permitido!";
             }
         }
     </script>
